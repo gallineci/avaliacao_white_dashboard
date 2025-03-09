@@ -10,18 +10,28 @@
 
     <title>{{ config('app.name', 'White Dashboard') }}</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+
     <!-- Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
     <!-- Icons -->
-    <link href="{{ asset('white') }}/css/nucleo-icons.css" rel="stylesheet" />
-    <!-- CSS -->
-    <link href="{{ asset('white') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
+    <link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="{{ asset('css/white-dashboard.css?v=1.0.0') }}" rel="stylesheet" />
+
+    <!-- Bootstrap RTL (caso precise de suporte para idiomas RTL, como árabe e hebraico) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{ asset('white') }}/demo/demo.css" rel="stylesheet" />
+
+    <!-- CSS apenas para demonstração (remova do ambiente de produção) -->
+    <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
+
 </head>
 
 <body class=" rtl menu-on-right white-content">
@@ -152,7 +162,7 @@
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
-                    <img src="{{ asset('white') }}/img/anime3.png" alt="Profile Photo">
+                    <img src="{{ asset('img/anime3.png') }}" alt="Profile Photo">
                   </div>
                   <b class="caret d-none d-lg-block d-xl-block"></b>
                   <p class="d-lg-none">
@@ -628,23 +638,24 @@
       </ul>
     </div>
   </div>
-  <!--   Core JS Files   -->
-  <script src="{{ asset('white') }}/js/core/jquery.min.js"></script>
-  <script src="{{ asset('white') }}/js/core/popper.min.js"></script>
-  <script src="{{ asset('white') }}/js/core/bootstrap.min.js"></script>
-  <script src="{{ asset('white') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
+  <!-- Core JS Files -->
+  <script src="{{ asset('js/core/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/core/popper.min.js') }}"></script>
+  <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+  <!-- Google Maps Plugin -->
   <!-- Place this tag in your head or just before your close body tag. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
-  <script src="{{ asset('white') }}/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="{{ asset('white') }}/js/plugins/bootstrap-notify.js"></script>
+  <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
+  <!-- Notifications Plugin -->
+  <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
   <!-- Control Center for White Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{{ asset('white') }}/js/white-dashboard.min.js?v=1.0.0"></script>
+  <script src="{{ asset('js/white-dashboard.min.js?v=1.0.0') }}"></script>
   <!-- White Dashboard DEMO methods, don't include it in your project! -->
-  <script src="{{ asset('white') }}/demo/demo.js"></script>
+  <script src="{{ asset('js/demo.js') }}"></script>
   <script>
+
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');

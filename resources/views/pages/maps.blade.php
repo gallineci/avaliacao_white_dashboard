@@ -16,12 +16,18 @@
 @endsection
 
 @push('js')
-    <!-- Place this tag in your head or just before your close body tag. -->
+    <!-- Google Maps Plugin (caso seja necessário) -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    
+    <!-- Carregar demos.js antes de usá-lo -->
+    <script src="{{ asset('js/demos.js') }}"></script>
+
     <script>
         $(document).ready(function() {
-            // Javascript method's body can be found in assets/js/demos.js
-            demo.initGoogleMaps();
+            // Verifica se demo.initGoogleMaps existe antes de chamar
+            if (typeof demo !== 'undefined' && typeof demo.initGoogleMaps === 'function') {
+                demo.initGoogleMaps();
+            }
         });
     </script>
 @endpush
