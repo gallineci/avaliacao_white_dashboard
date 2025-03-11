@@ -1,6 +1,7 @@
 <?php
 // routes/web.php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 // Rota para a página inicial
 Route::get('/', function () {
@@ -20,3 +21,5 @@ Route::resource('noticias', App\Http\Controllers\NoticiaController::class)->midd
 Route::get('/noticias/search', [App\Http\Controllers\NoticiaController::class, 'search'])->name('noticias.search')->middleware('auth');
 
 Route::get('/profile/edit', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+
+Route::resource('users', UserController::class);
